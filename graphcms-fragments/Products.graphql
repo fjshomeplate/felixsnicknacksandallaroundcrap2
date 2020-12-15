@@ -1,0 +1,11 @@
+fragment Products on Products {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  productName
+  createdDate
+  quantity
+  description
+}
