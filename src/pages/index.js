@@ -20,7 +20,7 @@ const IndexPage = ({data:products}) => (
     </div>
 )
 export const query = graphql`
-{
+ query{
    products:allGraphCmsProducts(limit: 3, sort: {fields: createdDate}) {
      nodes {
        productName
