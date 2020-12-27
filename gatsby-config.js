@@ -3,9 +3,9 @@ const { createHttpLink } = require(`apollo-link-http`)
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Felix's Nick-Nacks and All-Around Crap`,
+    description: `Gatsby Silly Site Challenge Entry of Felix`,
+    author: `Felix Stuart`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

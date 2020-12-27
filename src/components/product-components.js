@@ -1,38 +1,11 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import "./hcrap.css"
+import React from 'react';
 
-const NewProducts =()=> {
-    <div>
-    <h1 className="flashy-head">New Products</h1>
-    <h2 className="flashy-head">The Latest and Greatest!</h2>
-    </div>
+import ProductThumbnail from './productThumbnail';
+
+function ProductList({ products }) {
+  if (!products) return null;
+
+  return <div className="flex flex-wrap -mx-6">{products.map(ProductThumbnail)}</div>;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//exprt everything
-
-export default NewProducts;
+export default ProductList;

@@ -8,11 +8,13 @@ import Image from "./image"
 const Menu = ({ siteTitle }) => (
   <div className="header">
     <div className="logo">
-    <Link src="/">
+    <a href="/">
+  <div style={{ maxWidth: `200px` }}>  
     <Image
       alt="Felix's Nick Nacks and all around crap logo"
     />
-    </Link>
+    </div>
+    </a>
     </div>
   </div>
 

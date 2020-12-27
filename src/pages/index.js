@@ -1,26 +1,33 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import HMain from "../components/header-crap"
 import Menu from "../components/header-menu"
-import ProductThumbnail from "../components/productThumbnail"
+import ProductGrid from "../components/productGrid"
 //import WUC from "../components/WUC"
 
-const IndexPage = () => (
+const IndexPage = ({data:products}) => (
   <div>
   <SEO title="Home" />
     <Menu />
     <HMain />
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+
+    <div>
+      <ProductGrid products={products.nodes}/>
     </div>
-    <ProductThumbnail />
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </div>
 )
+export const query = graphql`
+{
+   products:allGraphCmsProducts(limit: 3, sort: {fields: createdDate}) {
+     nodes {
+       productName
+       id
+     }
+   }
+ }
+`
 
 export default IndexPage
